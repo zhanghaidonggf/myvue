@@ -5,7 +5,6 @@ import App from './App'
 import router from './router'
 import semantic from '../public/semantic/semantic.js'
 import jQuery from 'jquery'
-Vue.use(jQuery)
 Vue.config.productionTip = false
 /* eslint-disable no-new */
 // 内部组件
