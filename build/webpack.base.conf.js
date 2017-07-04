@@ -24,16 +24,15 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
-      'jquery': 'jquery' 
+      'jquery': 'jquery',
     },
-    plugins: [
-      new webpack.optimize.CommonsChunkPlugin('common.js'),
+  },
+  plugins: [
       new webpack.ProvidePlugin({
           $: "jquery",
           jQuery: "jquery"
       })
-    ],
-  },
+  ],
   module: {
     rules: [
       {
