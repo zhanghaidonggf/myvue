@@ -4,7 +4,10 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import semantic from '../public/semantic/semantic.js'
-import jQuery from 'jquery'
+import echarts from 'echarts'
+import '../public/semantic/semantic.min.css'
+
+Vue.use(echarts)
 Vue.config.productionTip = false
 /* eslint-disable no-new */
 // 内部组件
