@@ -20,7 +20,7 @@ module.exports = {
       : config.dev.assetsPublicPath
   },
   resolve: {
-    extensions: ['.js', '.vue', '.json'],
+    extensions: ['.js', '.vue', '.json','.css'],
     alias: {
       'vue$': 'vue/dist/vue.min.js',
       'src': path.resolve(__dirname, '../src'),
@@ -46,7 +46,7 @@ module.exports = {
         include: [resolve('src'), resolve('test')]
       },
       {
-        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+        test: /\.(gif|png|jpe?g|svg)(\?.*)?$/,
         loader: 'url-loader',
         options: {
           limit: 10000,

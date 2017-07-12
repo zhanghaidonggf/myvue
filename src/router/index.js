@@ -7,6 +7,7 @@ import Road from '../components/Road'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/hello',
@@ -14,7 +15,7 @@ export default new Router({
       component: Hello
     },
     {
-      path: '/index',
+      path: '/',
       name: 'Index',
       component: Index
     },
