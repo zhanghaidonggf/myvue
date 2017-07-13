@@ -6,7 +6,7 @@
         <a id="prev_page_button"></a>
         <div id="loading" class="loading">{{msg}}...</div>
         <div id="mybook" style="width: 800px; height: 500px; margin-top: 0px;" class="booklet">
-                <div class="b-load"><div class="b-page b-page-0 b-p1" style="display: block; left: 0px; width: 400px; height: 500px;"><div class="b-wrap" style="width: 380px; height: 480px; padding: 10px;"><div class="b-page-empty" title="Beginning" rel="Beginning of Book"></div></div></div><div class="b-page b-page-3 b-p4" style="display: block; left: 400px; width: 400px; height: 500px;"><div class="b-wrap b-wrap-right" style="width: 380px; height: 480px; padding: 10px;"><div>
+                <div class="b-load"><div class="b-page b-page-0 b-p1" style="display: block; left: 0px; width: 400px; height: 500px;"><div class="b-wrap" style="width: 380px; height: 480px; padding: 10px;"><div class="b-page-empty" title="Beginning" rel="Beginning of Book"></div></div></div><div class="b-page b-page-3 b-p4" style="display: none; left: 400px; width: 400px; height: 500px;"><div class="b-wrap b-wrap-right" style="width: 380px; height: 480px; padding: 10px;"><div>
                     <img src="../assets/images/3.jpg" alt="">
                     <h1>Annotation Overlay Effect</h1>
                     <p>Today we will create a simple overlay effect to display annotations in e.g. portfolio
@@ -26,7 +26,7 @@
                       by using the slider controls. When a thumbnail is clicked,
                       it moves to the center and the full image preview opens.</p>
                   </div><div class="b-counter">1</div></div></div>
-                  <div class="b-page b-page-2 b-p3" style="display: block; left: 800px; width: 0px; height: 500px; padding-left: 0px;"><div class="b-wrap b-wrap-left" style="width: 380px; height: 480px; padding: 10px; left: 0px;"><div>
+                  <div class="b-page b-page-2 b-p3" style="display: none; left: 800px; width: 0px; height: 500px; padding-left: 0px;"><div class="b-wrap b-wrap-left" style="width: 380px; height: 480px; padding: 10px; left: 0px;"><div>
                     <img src="../assets/images/2.jpg" alt="">
                     <h1>Animated Portfolio Gallery</h1>
                     <p>Today we will create an animated portfolio gallery with jQuery.
@@ -170,75 +170,11 @@ export default {
   },
   methods: {
       init(){
-        var $mybook     = $('#mybook');
-        var $bttn_next    = $('#next_page_button');
-        var $bttn_prev    = $('#prev_page_button');
-        var $loading    = $('#loading');
-        var $mybook_images  = $mybook.find('img');
-        var cnt_images    = $mybook_images.length;
-        var loaded      = 0;
-        $mybook_images.each(function(){
-          var $img  = $(this);
-          var source  = $img.attr('src');
-          $('<img/>').load(function(){
-            ++loaded;
-            if(loaded == cnt_images){
-              $loading.hide();
-              $bttn_next.show();
-              $bttn_prev.show();
-              $mybook.show().booklet({
-                name:               null,                            // name of the booklet to display in the document title bar
-                width:              800,                             // container width
-                height:             500,                             // container height
-                speed:              600,                             // speed of the transition between pages
-                direction:          'LTR',                           // direction of the overall content organization, default LTR, left to right, can be RTL for languages which read right to left
-                startingPage:       0,                               // index of the first page to be displayed
-                easing:             'easeInOutQuad',                 // easing method for complete transition
-                easeIn:             'easeInQuad',                    // easing method for first half of transition
-                easeOut:            'easeOutQuad',                   // easing method for second half of transition
-
-                closed:             true,                           // start with the book "closed", will add empty pages to beginning and end of book
-                closedFrontTitle:   null,                            // used with "closed", "menu" and "pageSelector", determines title of blank starting page
-                closedFrontChapter: null,                            // used with "closed", "menu" and "chapterSelector", determines chapter name of blank starting page
-                closedBackTitle:    null,                            // used with "closed", "menu" and "pageSelector", determines chapter name of blank ending page
-                closedBackChapter:  null,                            // used with "closed", "menu" and "chapterSelector", determines chapter name of blank ending page
-                covers:             false,                           // used with  "closed", makes first and last pages into covers, without page numbers (if enabled)
-
-                pagePadding:        10,                              // padding for each page wrapper
-                pageNumbers:        true,                            // display page numbers on each page
-
-                hovers:             false,                            // enables preview pageturn hover animation, shows a small preview of previous or next page on hover
-                overlays:           false,                            // enables navigation using a page sized overlay, when enabled links inside the content will not be clickable
-                tabs:               false,                           // adds tabs along the top of the pages
-                tabWidth:           60,                              // set the width of the tabs
-                tabHeight:          20,                              // set the height of the tabs
-                arrows:             false,                           // adds arrows overlayed over the book edges
-                cursor:             'pointer',                       // cursor css setting for side bar areas
-
-                hash:               false,                           // enables navigation using a hash string, ex: #/page/1 for page 1, will affect all booklets with 'hash' enabled
-                keyboard:           true,                            // enables navigation with arrow keys (left: previous, right: next)
-                next:               $bttn_next,               // selector for element to use as click trigger for next page
-                prev:               $bttn_prev,               // selector for element to use as click trigger for previous page
-
-                menu:               null,                            // selector for element to use as the menu area, required for 'pageSelector'
-                pageSelector:       false,                           // enables navigation with a dropdown menu of pages, requires 'menu'
-                chapterSelector:    false,                           // enables navigation with a dropdown menu of chapters, determined by the "rel" attribute, requires 'menu'
-
-                shadows:            true,                            // display shadows on page animations
-                shadowTopFwdWidth:  166,                             // shadow width for top forward anim
-                shadowTopBackWidth: 166,                             // shadow width for top back anim
-                shadowBtmWidth:     50,                              // shadow width for bottom shadow
-
-                before:             function(){},                    // callback invoked before each page turn animation
-                after:              function(){}                     // callback invoked after each page turn animation
-              });
-            }
-          }).attr('src',source);
-        }) 
       }
+
   },
   mounted() {
-    this.init();
+    
   }
 }
 </script>
