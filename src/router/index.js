@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Hello from '../components/Hello'
 import Index from '../components/Index'
 import Road from '../components/Road'
+import Hobby from '../components/Hobby'
 
 Vue.use(Router)
 
@@ -23,6 +24,11 @@ export default new Router({
       path:'/road',
       name:'Road',
       component:Road
+    },
+    {
+      path:'/hobby',
+      name:'Hobby',
+      component:Hobby
     }
   ]
 })

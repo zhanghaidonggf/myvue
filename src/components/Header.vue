@@ -4,7 +4,7 @@
       <div class="four ui buttons">
         <button class="ui black button"><router-link to="/">自我简述</router-link></button>
         <button class="ui black button"><router-link to="/road">我的成长之路</router-link></button>
-        <button class="ui black button"><router-link to="/">爱好</router-link></button>
+        <button class="ui black button"><router-link to="/hobby">爱好</router-link></button>
         <button class="ui black button"><router-link to="/road">其他</router-link></button>
       </div>
     </div>
