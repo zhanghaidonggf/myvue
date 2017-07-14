@@ -8,7 +8,7 @@
         </header>
     </div>
     <div class="ui contentbody">
-      <div class="ui container topcard panel-description">
+      <div class="ui container topcard center aligned panel-description">
               <img src="../assets/images/haidong.jpg" class="ui small centered image">
               <h3 class="ui centered">大家好我是haidong,是一名前端工程师,爱好打篮球、旅行</h3>
               <h4 class="ui centered">想看到自信的自己,今天就要强大起来</h4>
@@ -153,6 +153,9 @@ a {
 .topcard img{
   padding:20px;
   border-radius:75px;
+}
+.panel-description{
+
 }
 .contentbody{
   position:relative;

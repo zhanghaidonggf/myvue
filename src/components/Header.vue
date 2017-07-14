@@ -5,12 +5,11 @@
         <button class="ui black button"><router-link to="/">自我简述</router-link></button>
         <button class="ui black button"><router-link to="/road">我的成长之路</router-link></button>
         <button class="ui black button"><router-link to="/hobby">爱好</router-link></button>
-        <button class="ui black button"><router-link to="/road">其他</router-link></button>
+        <button class="ui black button"><router-link to="/link">联系我</router-link></button>
       </div>
     </div>
   </div>
 </template>
-
 <script>
 export default {
   name: 'header',

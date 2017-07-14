@@ -4,6 +4,7 @@ import Hello from '../components/Hello'
 import Index from '../components/Index'
 import Road from '../components/Road'
 import Hobby from '../components/Hobby'
+import Link from '../components/Link'
 
 Vue.use(Router)
 
@@ -24,6 +25,11 @@ export default new Router({
       path:'/road',
       name:'Road',
       component:Road
+    },
+    {
+      path:'/link',
+      name:'Link',
+      component:Link
     },
     {
       path:'/hobby',
