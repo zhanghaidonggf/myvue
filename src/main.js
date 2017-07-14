@@ -6,7 +6,7 @@ import router from './router'
 import semantic from '../public/semantic/semantic.js'
 import echarts from 'echarts'
 import '../public/semantic/semantic.min.css'
-import vali from 'vali/index.js'
+import vali from './vali/index.js'
 Vue.use(vali)
 Vue.use(echarts)
 Vue.config.productionTip = false
