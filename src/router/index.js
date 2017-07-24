@@ -27,7 +27,7 @@ export default new Router({
       component:Road
     },
     {
-      path:'/link',
+      path:'/link*',
       name:'Link',
       component:Link
     },

@@ -6,8 +6,8 @@ import router from './router'
 import semantic from '../public/semantic/semantic.js'
 import echarts from 'echarts'
 import '../public/semantic/semantic.min.css'
-import vali from './vali/index.js'
-Vue.use(vali)
+import Validator from 'vue-validator'
+Vue.use(Validator)
 Vue.use(echarts)
 Vue.config.productionTip = false
 /* eslint-disable no-new */

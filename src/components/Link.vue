@@ -1,26 +1,28 @@
 <template>
   <div class="link">
-      <div class="ui container">
-         <h1 class="ui title">打个招呼吧</h1>
-         <h2 class="introduce">留言功能和留言板正在建设当中......</h2>
-         <div class="ui massive form">
-            <div class="eight wide field">
-               <input type="text" placeholder="称呼" v-focus>
-            </div>
-            <div class="sixteen wide field">
-               <textarea type="text" placeholder="留言"></textarea>
-            </div>
-            <div class="eight wide field">
-               <input type="text" placeholder="邮箱">
-            </div>
-            <div class="eight wide field">
-               <input type="text" placeholder="个人主页或github地址">
-            </div>
-            <div class="sixteen wide field sendbutton">
-               <i class="send outline big icon"></i>
-            </div>
-         </div>
-      </div>
+        <div class="ui container">
+           <h1 class="ui title">打个招呼吧</h1>
+           <h2 class="introduce">留言功能和留言板正在建设当中......</h2>
+           <validator name="validation">
+             <div class="ui massive form">
+                <div class="seven wide field">
+                   <input type="text" placeholder="称呼" v-focus v-model="nicheng" v-validate:nicheng="{minlength:3,maxlength:15}" id='nicheng'>
+                </div>
+                <div class="sixteen wide field">
+                   <textarea type="text" placeholder="留言" v-model="liuyan"></textarea>
+                </div>
+                <div class="seven wide field">
+                   <input type="text" placeholder="邮箱" v-model="email">
+                </div>
+                <div class="seven wide field" style="margin-left:108px">
+                   <input type="text" placeholder="个人主页或github地址" v-model="github">
+                </div>
+                <div class="sixteen wide field sendbutton">
+                   <i class="send outline big icon"></i>
+                </div>
+             </div>
+           </validator>
+        </div>
   </div>
 </template>
 
@@ -29,11 +31,16 @@ export default {
   name: 'link',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+       nicheng:"",
+       liuyan:"",
+       email:"",
+       github:""
     }
   },
   mounted(){
     $('.autumn.leaf').transition('drop');
+    console.log(this.$router)
+
   }
 }
 </script>

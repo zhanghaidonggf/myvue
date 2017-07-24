@@ -6,5 +6,8 @@ export default{
 		    el.focus()
 		  }
 	    })
-	}	
+	}
 }
+var message={
+		required:"必填"
+	}
